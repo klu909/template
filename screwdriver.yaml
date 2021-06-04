@@ -1,19 +1,16 @@
 ---
 shared:
-  image: node:8
+  image: node:14
 jobs:
   main:
     requires: [~pr, ~commit]
     steps:
     - install_prerequisites: npm install -g screwdriver-template-main
     - validate_default-namespace_template: |
-        export SD_TEMPLATE_PATH=./templates/screwdriver-template.yaml
         template-validate
 
   publish_default-namespace_template:
     requires: [main]
-    environment:
-      SD_TEMPLATE_PATH: ./templates/screwdriver-template.yaml
     steps:
     - install_prerequisites: npm install -g screwdriver-template-main
     - publish:  template-publish
