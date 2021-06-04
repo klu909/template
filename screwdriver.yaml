@@ -6,14 +6,14 @@ jobs:
     requires: [~pr, ~commit]
     steps:
     - install_prerequisites: npm install -g screwdriver-template-main
-    - validate_no-namespace_template: |
-        export SD_TEMPLATE_PATH=./templates/other-template.yaml
+    - validate_default-namespace_template: |
+        export SD_TEMPLATE_PATH=./templates/screwdriver-template.yaml
         template-validate
 
-  publish_no-namespace_template:
+  publish_default-namespace_template:
     requires: [main]
     environment:
-      SD_TEMPLATE_PATH: ./templates/other-template.yaml
+      SD_TEMPLATE_PATH: ./templates/screwdriver-template.yaml
     steps:
     - install_prerequisites: npm install -g screwdriver-template-main
-    - publish:  template-publish 
+    - publish:  template-publish
