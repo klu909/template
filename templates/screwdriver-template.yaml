@@ -1,9 +1,9 @@
 namespace: wahapo
-name: template
+name: tifftemplate
 version: "1"
-description: should have default namespace
-maintainer: default@baz.com
+description: "should have default namespace"
+maintainer: "default@baz.com"
 config:
-  image: node:8
+  image: node:14
   steps:
     - echo: echo meow
