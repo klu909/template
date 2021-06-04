@@ -1,3 +1,4 @@
+namespace: wahapo
 name: tifftemplate
 version: "1"
 description: should have default namespace
