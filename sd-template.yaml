@@ -1,4 +1,4 @@
-name: wahapotemplate2
+name: wahapo/wahapotemplate2
 version: "1"
 description: "should have default namespace"
 maintainer: "default@baz.com"
