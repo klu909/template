@@ -1,16 +1,20 @@
----
 shared:
-  image: node:14
-jobs:
-  main:
-    requires: [~pr, ~commit]
-    steps:
-    - install_prerequisites: npm install -g screwdriver-template-main
-    - validate_default-namespace_template: |
-        template-validate
+    image: node:12
 
-  publish_default-namespace_template:
-    requires: [main]
-    steps:
-    - install_prerequisites: npm install -g screwdriver-template-main
-    - publish:  template-publish
+jobs:
+    main:
+        requires: [~commit]
+        steps:
+              - hello: echo hi
+    prjob:
+        requires: [~pr]
+        steps:
+            - hello: echo hi
+    test:
+        requires: [main]
+        steps:
+            - hello: echo hii
+    end:
+        requires: [test]
+        steps:
+            - hello: echo hii
