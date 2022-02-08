@@ -5,7 +5,7 @@ jobs:
     main:
         requires: [~commit]
         steps:
-              - hello: echo hi
+              - hello: sleep 300
     prjob:
         requires: [~pr]
         steps:
