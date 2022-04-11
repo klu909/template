@@ -1,9 +1,11 @@
 shared:
     image: node:12
-
+    
 jobs:
     main:
         requires: [~commit]
+        annotations:
+            screwdriver.cd/blockedBySameJob: false
         steps:
               - hello: sleep 500
 #     prjob:
