@@ -6,6 +6,7 @@ jobs:
         requires: [~commit]
         annotations:
             screwdriver.cd/blockedBySameJob: false
+            screwdriver.cd/blockedBySameJobWaitTime: 1
         steps:
               - hello: sleep 500
 #     prjob:
