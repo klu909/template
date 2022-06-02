@@ -9,19 +9,19 @@ jobs:
     main:
         requires: [~commit]
         annotations:
-            screwdriver.cd/buildPeriodically: 20 11 * * *
+            screwdriver.cd/buildPeriodically: 20 1 * * *
         steps:
               - hello: sleep 10
     job1:
         requires: [~commit]
         annotations:
-            screwdriver.cd/buildPeriodically: 20 11 * * *
+            screwdriver.cd/buildPeriodically: 20 1 * * *
         steps:
               - hello: sleep 10
     job2:
         requires: [~commit]
         annotations:
-            screwdriver.cd/buildPeriodically: 20 11 * * *
+            screwdriver.cd/buildPeriodically: 20 1 * * *
         steps:
               - hello: sleep 10
 #     prjob:
