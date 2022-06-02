@@ -2,28 +2,28 @@ shared:
     image: node:12
     
 jobs:
-    main:
-        requires: [~commit]
-        steps:
-              - hello: sleep 10
 #     main:
 #         requires: [~commit]
-#         annotations:
-#             screwdriver.cd/buildPeriodically: 20 5 * * *
 #         steps:
 #               - hello: sleep 10
-#     job1:
-#         requires: [~commit]
-#         annotations:
-#             screwdriver.cd/buildPeriodically: 20 5 * * *
-#         steps:
-#               - hello: sleep 10
-#     job2:
-#         requires: [~commit]
-#         annotations:
-#             screwdriver.cd/buildPeriodically: 20 5 * * *
-#         steps:
-#               - hello: sleep 10
+    main:
+        requires: [~commit]
+        annotations:
+            screwdriver.cd/buildPeriodically: 20 5 * * *
+        steps:
+              - hello: sleep 10
+    job1:
+        requires: [~commit]
+        annotations:
+            screwdriver.cd/buildPeriodically: 20 5 * * *
+        steps:
+              - hello: sleep 10
+    job2:
+        requires: [~commit]
+        annotations:
+            screwdriver.cd/buildPeriodically: 20 5 * * *
+        steps:
+              - hello: sleep 10
 #     prjob:
 #         requires: [~pr]
 #         steps:
