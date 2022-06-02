@@ -5,7 +5,7 @@ jobs:
     main:
         requires: [~commit]
         annotations:
-            screwdriver.cd/buildPeriodically: 0 9 * * 2
+            screwdriver.cd/buildPeriodically: 20 5 * * *
         steps:
               - hello: sleep 10
 #     prjob:
