@@ -8,10 +8,8 @@ jobs:
 #               - hello: sleep 10
     main:
         requires: [~commit]
-        annotations:
-            screwdriver.cd/buildPeriodically: 20 1 * * *
         steps:
-              - hello: sleep 10
+              - hello: echo hello
 #     job1:
 #         requires: [~commit]
 #         annotations:
