@@ -7,6 +7,6 @@ jobs:
             - hello: meta set meta.test.meta "a meta"
     test:
         requires: [main]
-        freezeWindows: ['51-54 14 ? * *']
+        freezeWindows: ['* 14-15 ? * *']
         steps:
             - hello: echo hii
