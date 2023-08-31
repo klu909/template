@@ -4,9 +4,8 @@ jobs:
     main:
         requires: [~commit]
         steps:
-              - hello: meta set meta.test.meta "a meta"
-     test:
-         requires: [main]
-         steps:
-             - hello: echo hii
-
+            - hello: meta set meta.test.meta "a meta"
+    test:
+        requires: [main]
+        steps:
+            - hello: echo hii
