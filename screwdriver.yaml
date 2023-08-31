@@ -14,7 +14,7 @@ jobs:
         requires: [test]
         steps:
             - hello: meta get meta.test.meta
-    test:
+    test3:
         requires: [test]
         steps:
             - hello: meta get meta.test.meta
