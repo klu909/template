@@ -1,38 +1,12 @@
 shared:
-    image: node:12
-    settings:
-        email: [test@email.com, test2@email.com]
-        slack: 'mychannel'
+    image: node:18
 jobs:
-#     main:
-#         requires: [~commit]
-#         steps:
-#               - hello: sleep 10
     main:
         requires: [~commit]
         steps:
-              - hello: echo hello
-#     job1:
-#         requires: [~commit]
-#         annotations:
-#             screwdriver.cd/buildPeriodically: 20 2 * * *
-#         steps:
-#               - hello: sleep 10
-#     job2:
-#         requires: [~commit]
-#         annotations:
-#             screwdriver.cd/buildPeriodically: 20 2 * * *
-#         steps:
-#               - hello: sleep 10
-#     prjob:
-#         requires: [~pr]
-#         steps:
-#             - hello: echo hi
-#     test:
-#         requires: [main]
-#         steps:
-#             - hello: echo hii
-#     end:
-#         requires: [test]
-#         steps:
-#             - hello: echo hii
+              - hello: meta set meta.test.meta "a meta"
+     test:
+         requires: [main]
+         steps:
+             - hello: echo hii
+
