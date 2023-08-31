@@ -7,7 +7,7 @@ jobs:
             - hello: meta set meta.test.meta "a meta"
     test:
         requires: [main]
-        freezeWindows: ['20-30 17-23 ? * *']
+        freezeWindows: ['* 17-24 ? * *']
         steps:
             - hello: meta get meta.test.meta
     test2:
